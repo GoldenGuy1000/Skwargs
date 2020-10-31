@@ -3,10 +3,10 @@ import java.util.*;
 public class Skwargs {
     Map<String, String> Variables = new HashMap<>();
 
-    public Skwargs(String[] variables, String[] defaultValues, String[] kwargs) {
+    public Skwargs(String[] keys, String[] defaultValues, String[] kwargs) {
         // setting up defaults
-        for(int i = 0; i < variables.length; i++ ) {
-            this.Variables.put(variables[i].replace(" ", ""),defaultValues[i].replace(" ", ""));
+        for(int i = 0; i < keys.length; i++ ) {
+            this.Variables.put(keys[i].replace(" ", ""),defaultValues[i].replace(" ", ""));
         }
         // updating dictionary with kwargs
         for(String kwarg : kwargs) {
@@ -54,9 +54,8 @@ public class Skwargs {
     }
 
 }
-
 // the following code is just an example use of Skwargs and at the top it's showing how to set it up
-
+//
 //    private static double math (double num1, double num2, String ... kwargs) {
 //        String[] variables = new String[]{"typeOfMath","intMath"};
 //        String[] defaults = new String[]{"addition","false"};
@@ -75,3 +74,4 @@ public class Skwargs {
 //            return 0;
 //        }
 //    }
+
