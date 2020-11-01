@@ -1,3 +1,4 @@
+package Skwargs;
 import java.util.Map;
 
 public class Skwargs {
